@@ -151,6 +151,50 @@
   background: rgba(255, 255, 255, 0.03);
 }
 
+.topbar-account {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.topbar-account-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 72px;
+  min-height: 34px;
+  padding: 0 10px;
+  border-radius: 999px;
+  background: rgba(148, 163, 184, 0.12);
+  color: #d8e2ee;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.topbar-account-badge-live {
+  background: rgba(52, 211, 153, 0.14);
+  color: #9ff0ca;
+}
+
+.topbar-account-copy {
+  display: flex;
+  flex-direction: column;
+}
+
+.topbar-account-copy strong {
+  color: #f8fafc;
+  font-size: 0.95rem;
+}
+
+.topbar-account-copy span {
+  color: #8fa0b5;
+  font-size: 0.82rem;
+}
+
 .search-input,
 .field-input {
   width: 100%;
@@ -233,6 +277,45 @@
 .auth-grid,
 .ide-layout {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.auth-status-block,
+.auth-install-state,
+.auth-progress-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.auth-progress-list {
+  margin-top: 18px;
+}
+
+.auth-progress-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 16px;
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.auth-progress-dot {
+  width: 12px;
+  height: 12px;
+  margin-top: 4px;
+  border-radius: 999px;
+  background: rgba(148, 163, 184, 0.24);
+}
+
+.auth-progress-dot-live {
+  background: #ff7a18;
+  box-shadow: 0 0 0 6px rgba(255, 122, 24, 0.12);
+}
+
+.auth-progress-dot-done {
+  background: #34d399;
 }
 
 .hero {
@@ -322,6 +405,17 @@
   gap: 16px;
 }
 
+.stats-row,
+.timeline-grid,
+.social-proof-row,
+.pricing-grid,
+.faq-list,
+.demo-grid,
+.demo-comments {
+  display: grid;
+  gap: 16px;
+}
+
 .feature-grid {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
@@ -335,11 +429,130 @@
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.stats-row {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.timeline-grid,
+.pricing-grid,
+.demo-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.demo-grid {
+  grid-template-columns: 1.2fr 0.8fr;
+}
+
+.social-proof-row {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  margin-bottom: 18px;
+}
+
 .feature-card,
 .review-form,
 .results-panel,
 .result-card {
   padding: 20px;
+}
+
+.stat-card,
+.demo-code-card,
+.demo-comment-card,
+.pricing-card,
+.faq-item {
+  padding: 20px;
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.stat-value {
+  display: block;
+  color: #f8fafc;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.stat-label-text {
+  display: block;
+  margin-top: 8px;
+  color: #93a5bb;
+}
+
+.social-proof-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  border-radius: 16px;
+  color: #dce6f2;
+  background: rgba(255, 255, 255, 0.02);
+  font-weight: 600;
+}
+
+.timeline-step {
+  display: inline-flex;
+  margin-bottom: 12px;
+  color: #ff9a57;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.demo-code-card,
+.demo-comments {
+  min-height: 100%;
+}
+
+.demo-code-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  color: #c8d4e3;
+  font-size: 0.9rem;
+}
+
+.demo-code-block {
+  margin: 0;
+  overflow: auto;
+  padding: 18px;
+  border-radius: 16px;
+  background: #0a1018;
+  color: #dff5e8;
+  font-family: "Consolas", "Courier New", monospace;
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.demo-comment-bot {
+  color: #93a5bb;
+  font-size: 0.82rem;
+}
+
+.severity-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.severity-pill-bug {
+  color: #fecaca;
+  background: rgba(239, 68, 68, 0.14);
+}
+
+.severity-pill-suggestion {
+  color: #fde68a;
+  background: rgba(234, 179, 8, 0.14);
+}
+
+.severity-pill-info {
+  color: #bfdbfe;
+  background: rgba(59, 130, 246, 0.14);
 }
 
 .status-pill {
@@ -363,6 +576,11 @@
   justify-content: flex-start;
   margin-top: 18px;
   font-size: 0.92rem;
+}
+
+.home-auth-status,
+.auth-banner {
+  margin-top: 18px;
 }
 
 .review-workspace {
@@ -436,6 +654,123 @@
   grid-column: 1 / -1;
 }
 
+.pricing-hero {
+  text-align: center;
+}
+
+.billing-toggle {
+  display: inline-flex;
+  gap: 8px;
+  padding: 8px;
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.billing-toggle-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 0 14px;
+  border: none;
+  border-radius: 12px;
+  color: #d7e0eb;
+  background: transparent;
+  cursor: pointer;
+}
+
+.billing-toggle-button-active {
+  color: #ffffff;
+  background: rgba(255, 122, 24, 0.14);
+}
+
+.billing-save-pill {
+  padding: 4px 8px;
+  border-radius: 999px;
+  color: #9ff0ca;
+  background: rgba(52, 211, 153, 0.14);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.pricing-card-featured {
+  border-color: rgba(255, 122, 24, 0.26);
+  box-shadow: 0 0 0 1px rgba(255, 122, 24, 0.08), 0 22px 60px rgba(0, 0, 0, 0.22);
+}
+
+.pricing-price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin: 16px 0 10px;
+}
+
+.pricing-price {
+  color: #ffffff;
+  font-size: 2.4rem;
+  font-weight: 800;
+}
+
+.pricing-period {
+  color: #93a5bb;
+}
+
+.pricing-feature-list {
+  margin: 18px 0 0;
+  padding-left: 18px;
+  color: #dce6f3;
+}
+
+.pricing-feature-list li + li {
+  margin-top: 10px;
+}
+
+.comparison-table {
+  overflow: hidden;
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  border-radius: 18px;
+}
+
+.comparison-row {
+  display: grid;
+  grid-template-columns: 1.4fr repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  padding: 16px 18px;
+  border-top: 1px solid rgba(148, 163, 184, 0.08);
+  color: #dce6f3;
+}
+
+.comparison-row:first-child {
+  border-top: none;
+}
+
+.comparison-row-head {
+  color: #f8fafc;
+  background: rgba(255, 255, 255, 0.03);
+  font-weight: 700;
+}
+
+.faq-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+  padding: 0;
+  border: none;
+  color: inherit;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+}
+
+.faq-symbol {
+  color: #ff9a57;
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
 @keyframes spin {
   to {
     transform: rotate(360deg);
@@ -444,14 +779,19 @@
 
 @media (max-width: 1180px) {
   .feature-grid,
-  .repository-grid {
+  .repository-grid,
+  .stats-row,
+  .social-proof-row,
+  .timeline-grid,
+  .pricing-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .home-grid,
   .review-page-grid,
   .auth-grid,
-  .ide-layout {
+  .ide-layout,
+  .demo-grid {
     grid-template-columns: 1fr;
   }
 }
@@ -482,6 +822,7 @@
   }
 
   .topbar-search,
+  .topbar-account,
   .search-input-standalone,
   .review-form-note,
   .score-panel {
@@ -493,7 +834,12 @@
   .feature-grid,
   .repository-grid,
   .feature-grid-compact,
-  .results-grid {
+  .results-grid,
+  .stats-row,
+  .social-proof-row,
+  .timeline-grid,
+  .pricing-grid,
+  .comparison-row {
     grid-template-columns: 1fr;
   }
 

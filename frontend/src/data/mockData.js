@@ -1,10 +1,31 @@
 export const appNavigation = [
   { href: '/', label: 'Home' },
+  { href: '/pricing', label: 'Pricing' },
   { href: '/repositories', label: 'Repositories' },
   { href: '/reviews', label: 'Reviews' },
   { href: '/integrations', label: 'Integrations' },
   { href: '/ide', label: 'IDE Flow' },
 ];
+
+export const defaultAuthState = {
+  provider: 'github',
+  status: 'signed_out',
+  isVerified: false,
+  username: '',
+  email: '',
+  installationStatus: 'Not installed',
+  accessibleRepos: 0,
+};
+
+export const verifiedGithubProfile = {
+  provider: 'github',
+  status: 'verified',
+  isVerified: true,
+  username: 'Karthikeyan5353',
+  email: 'karthikeyan5353@users.noreply.github.com',
+  installationStatus: 'Installed on selected repositories',
+  accessibleRepos: 12,
+};
 
 export const repositoryCatalog = [
   {
@@ -39,7 +60,7 @@ export const repositoryCatalog = [
 export const integrationCards = [
   {
     title: 'GitHub',
-    status: 'Connected',
+    status: 'Ready',
     detail: 'Sign in, authorize the app, sync repositories, and trigger pull request reviews.',
   },
   {
@@ -75,6 +96,108 @@ export const reviewHighlights = [
   {
     title: 'Learns Team Style',
     detail: 'Reserve space for future preference-aware review rules and team conventions.',
+  },
+];
+
+export const landingStats = [
+  { value: '9,000+', label: 'teams using AI-assisted review workflows' },
+  { value: '2M+', label: 'repositories represented in the product vision' },
+  { value: '13M+', label: 'pull requests reviewed across modern code-review platforms' },
+  { value: '50%', label: 'faster review loops for active engineering teams' },
+];
+
+export const socialProofCompanies = ['Mercury', 'Linear', 'PostHog', 'Groupon', 'Raycast', 'Vercel'];
+
+export const reviewDemoComments = [
+  {
+    severity: 'Bug',
+    title: 'Missing guard before using repository config',
+    body: 'This flow assumes config exists. Add a null-safe fallback before reading repository settings.',
+  },
+  {
+    severity: 'Suggestion',
+    title: 'Summarize review state for the user',
+    body: 'A clearer success state would help reviewers know whether the AI finished analysis or is still running.',
+  },
+  {
+    severity: 'Info',
+    title: 'Nice separation of concerns',
+    body: 'The API and UI responsibilities are already split in a way that will be easier to grow later.',
+  },
+];
+
+export const pricingTiers = [
+  {
+    name: 'Starter',
+    monthlyPrice: '$0',
+    annualPrice: '$0',
+    description: 'Best for open-source projects and solo developers exploring AI reviews.',
+    cta: 'Start Free',
+    badge: '',
+    features: [
+      'Up to 3 repositories',
+      'PR summaries and walkthroughs',
+      'Basic AI comments for 5 PRs each month',
+      'GitHub and GitLab support',
+      'Community support',
+    ],
+  },
+  {
+    name: 'Team',
+    monthlyPrice: '$19',
+    annualPrice: '$15',
+    description: 'Built for product teams that want reliable code review automation in their workflow.',
+    cta: 'Start Team Trial',
+    badge: 'Most Popular',
+    features: [
+      'Unlimited repositories and pull request reviews',
+      'Inline AI comments with fix suggestions',
+      'Review memory and custom rules',
+      'Security checks, linters, and code summaries',
+      'Analytics dashboard and IDE workflows',
+    ],
+  },
+  {
+    name: 'Enterprise',
+    monthlyPrice: 'Custom',
+    annualPrice: 'Custom',
+    description: 'For organizations that need advanced controls, deployment flexibility, and dedicated support.',
+    cta: 'Talk to Sales',
+    badge: '',
+    features: [
+      'Everything in Team',
+      'SSO and advanced role management',
+      'Custom model and integration options',
+      'Self-hosted or on-prem deployment',
+      'Dedicated support and audit controls',
+    ],
+  },
+];
+
+export const pricingFaqs = [
+  {
+    question: 'What counts as a seat?',
+    answer: 'A seat represents one developer or reviewer who actively uses RepoX workflows in the organization.',
+  },
+  {
+    question: 'Is it free for open source?',
+    answer: 'Yes. The Starter plan is designed to support public repositories and lighter review usage.',
+  },
+  {
+    question: 'Can I change plans anytime?',
+    answer: 'Yes. Teams can move between Starter, Team, and Enterprise as their workflow needs change.',
+  },
+  {
+    question: 'What Git platforms are supported?',
+    answer: 'RepoX is currently centered on GitHub in this frontend and is planned to expand to GitLab, Bitbucket, and Azure DevOps.',
+  },
+  {
+    question: 'Is my code stored?',
+    answer: 'For a simple campus-ready project, RepoX is designed to review code context without needing long-term storage of full source files.',
+  },
+  {
+    question: 'How does per-seat pricing work?',
+    answer: 'Each active developer or reviewer on a team counts as a seat, making pricing easy to explain for small teams and resumes.',
   },
 ];
 
