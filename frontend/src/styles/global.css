@@ -1,9 +1,11 @@
 :root {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "IBM Plex Sans", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   color: #f4f7fb;
   background: #0b1020;
   line-height: 1.5;
   font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
 }
 
 * {
@@ -14,9 +16,23 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+  background: #151119;
 }
 
 button,
 input {
   font: inherit;
+}
+
+button,
+input {
+  color: inherit;
+}
+
+button {
+  appearance: none;
+}
+
+#root {
+  min-height: 100vh;
 }
